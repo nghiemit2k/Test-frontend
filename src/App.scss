@@ -1,0 +1,44 @@
+
+#root {
+  .header-container {
+    .btn-login {
+      border-radius: 30px;
+      margin-right: 15px;
+      padding: 0 15px;
+      border: 1px solid red;
+    }
+    .btn-signup {
+      border-radius: 5px;
+      padding: 0 15px;
+      background: #303030;
+      color: white;
+      &:hover {
+        background: black;
+      }
+    }
+    
+    .navbar {
+      padding-top: 10px;
+      z-index: 10;
+      background-color: rgba(0,0,0,0) !important;
+      .me-auto{
+        .nav-link {
+          &.active {
+            color: red important;
+          }
+         
+        }
+      }
+      
+      }
+     
+    }
+  
+  }
+
+
+video {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
