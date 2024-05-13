@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './Register.scss';
 import { useNavigate } from 'react-router-dom';
 import { postRegister } from '../../services/apiService';
-// import { toast } from 'react-toastify';
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 
 const Register = (props) => {
@@ -22,19 +21,12 @@ const Register = (props) => {
             );
     };
     const handleRegister = async () => {
-        //validate
+        
         const isValidEmail = validateEmail(email);
         if (!isValidEmail) {
             alert('Invalid email')
             return;
         }
-
-        // if (!password) {
-        //    alert('Invalid password')
-        //     return;
-        // }
-
-        //submit apis
         let res = await postRegister(username,email,password);
         const message = JSON.parse(JSON.stringify(res.data)).data.message;
         alert(message)
